@@ -97,8 +97,3 @@ class Queens {
 		print(board);	//Display solution
 	}
 }
-
-
-
-
-
