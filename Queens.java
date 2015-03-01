@@ -66,7 +66,6 @@ class Queens {
 		if (temp) {
 			return false;
 		}
-
 		return true;
 	}
 
@@ -75,7 +74,6 @@ class Queens {
 		if (c == 8) {
 			return;	//c == 8 the board is done
 		}
-
 		if(r == 8){	//r == 8 means solution was not found - Must backtrack
 			for (int i = 0; i < 8; ++i) {
 				if (board[c-1][i]) {
@@ -85,12 +83,10 @@ class Queens {
 				}
 			}
 		}
-
 		else if(valid(c,r)){	//valid spot change board[c][r] to true and move to the next column - recurse
 			board[c][r] = true;
 			solve(c+1,0);
 		}
-
 		else solve(c, r+1);	//c,r wasn't valid - go to the next row - recurse
 	}
 
